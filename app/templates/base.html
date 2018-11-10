@@ -1,13 +1,10 @@
 {% extends 'bootstrap/base.html'%}
 
+{% extends 'bootstrap/base.html' %}
+
 <!-- Navbar block  --> 
 {% block navbar %}
     {% include 'navbar.html' %}
 {% endblock %}
 
 
-{% extends 'bootstrap/base.html' %}
- {% block scripts %}
-{{ super() }}
-{{ moment.include_moment() }}
-{% endblock %}
