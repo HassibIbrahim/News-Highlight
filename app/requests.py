@@ -57,3 +57,20 @@ def process_results(news_list):
 
     return news_results
 
+
+def get_headlines(id):
+    get_headlines_url = secondary_url.format(id,api_key)
+
+    with urllib.request.urlopen(get_headlines_url) as url:
+        get_headlines_data = url.read()
+        get_headlines_response = json.loads(get_headlines_data)
+
+        headlines_results = None
+
+        if get_headlines_response['articles']:
+            headlines_results_list = get_headlines_response['articles']
+            headlines_results = process_headlines(headlines_results_list)
+
+
+    return headlines_results
+
