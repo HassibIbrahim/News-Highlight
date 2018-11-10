@@ -74,3 +74,20 @@ def get_headlines(id):
 
     return headlines_results
 
+
+def process_headlines(headlines_list):
+    headlines_results = []
+    for headlines_items in headlines_list:
+        id = headlines_items.get('id')
+        title = headlines_items.get('title')
+        description = headlines_items.get('description')
+        url = headlines_items.get('url')
+        urlToImage = headlines_items.get('urlToImage')
+        publishedAt = headlines_items.get('publishedAt')
+
+        if title:
+            headlines_object = Headlines(id,title,description,url,urlToImage,publishedAt)
+            headlines_results.append(headlines_object)
+
+    return headlines_results
+
