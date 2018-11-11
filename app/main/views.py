@@ -17,7 +17,15 @@ def index():
     sports_news = get_news('sports')
     technology_news = get_news('technology')
     title = 'Home - News Sources'
-    return render_template('index.html', title=title, business=business_news, entertainment=entertainment_news, general=general_news, health=health_news, science=science_news, sports=sports_news, technology=technology_news,)
+    return render_template('index.html', 
+                            title=title,
+                            business=business_news,
+                            entertainment=entertainment_news, 
+                            general=general_news, 
+                            health=health_news, 
+                            science=science_news, 
+                            sports=sports_news, 
+                            technology=technology_news,)
 
 @main.route('/headlines/<id>')
 def headlines(id):
@@ -26,4 +34,7 @@ def headlines(id):
     """
     headlines = get_headlines(id)
     title = f'{id}'
-    return render_template('news.html',title=title,headlines=headlines)
+    return render_template('news.html',
+                           title=title,
+                           headlines=headlines
+                           )

@@ -1,6 +1,6 @@
 {% macro displayNewsList(news_list) %}
-     {% for source in news_list %}
-            
+
+{% for source in news_list %}            
               <li class="list-group-item">
                 <a target="_blank" href="/headlines/{{ source.id }}">
                   {{ source.name }}</a>

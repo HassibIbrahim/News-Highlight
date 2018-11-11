@@ -1,4 +1,4 @@
-<div style='background-color:rosybrown'>
+<div style='background-color:#ebd6d6'>
     {% extends 'base.html'%}
     {% import 'macros.html' as macro%}
 
@@ -14,8 +14,8 @@
 
         <div class="col-md-4">
             <h3 class="card-header"> Business News</h3>
-            <div class="ex1">
-               
+            <div style="overflow: auto; width:auto; height:400px;">
+
                 <ol class="card-text">
                     {{ macro.displayNewsList(business)}}
                 </ol>
@@ -23,49 +23,28 @@
         </div>
 
 
-        <div class="col-md-4">
-            <h3 class="card-header"> Sports News</h3>
-            <div class="ex1">
-                <ol class="card-text" class="list-group list-group-flush">
-                    {{ macro.displayNewsList(sports)}}
-                </ol>
-            </div>
-        </div>
 
         <div class="col-md-4">
             <h3 class="card-header"> General News</h3>
-            <div class="ex1">
+            <div style="overflow: auto; width:auto; height:400px;">
                 <ol class="card-text">
                     {{ macro.displayNewsList(general)}}
                 </ol>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h3 class="card-header"> Technology News</h3>
-            <div class="ex1">
-                <ol class="card-text">
-                    {{ macro.displayNewsList(technology)}}
-                </ol>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="card-header"> Technology News</h3>
+                <div class="ex1">
+                    <ol class="card-text">
+                        {{ macro.displayNewsList(technology)}}
+                    </ol>
+                </div>
             </div>
+
         </div>
-        <div class="col-md-4">
-            <h3 class="card-header"> Political News</h3>
-            <div class="ex1">
-                <ol class="card-text">
-                    {{ macro.displayNewsList(political)}}
-                </ol>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <h3 class="card-header"> Entertainment News</h3>
-            <div class="ex1">
-                <ol class="card-text">
-                    {{ macro.displayNewsList(entertainment)}}
-                </ol>
-            </div>
-        </div>
+
+
     </div>
     {% endblock %}
 </div>
